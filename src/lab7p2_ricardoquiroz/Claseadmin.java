@@ -5,7 +5,10 @@
  */
 package lab7p2_ricardoquiroz;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -59,7 +62,24 @@ public class Claseadmin {
         this.lzombies.add(z);
     }
     
-    public void escribirArchivo(){
+    public void escribirArchivo() throws IOException{
+        FileWriter fw=null;
+        BufferedWriter bw = null;
+        try {
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
+            for (Planta p : lplantas) {
+                
+            }
+            bw.flush();
+            for (Zombie z : lzombies) {
+                
+            }
+            bw.flush();
+        } catch (Exception e) {
+        }
+        bw.close();
+        fw.close();
         
     }
     

@@ -8,6 +8,8 @@ package lab7p2_ricardoquiroz;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -542,7 +544,11 @@ public class MainPVZ extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainPVZ().setVisible(true);
+                try {
+                    new MainPVZ().setVisible(true);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(MainPVZ.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
