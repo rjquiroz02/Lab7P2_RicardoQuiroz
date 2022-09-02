@@ -5,15 +5,15 @@
  */
 package lab7p2_ricardoquiroz;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author rjqer
  */
-public class Clasico extends Zombie{
-    private int anosexp;
-    private Bandera bandera;
-    
-    
+public class Cargado extends Zombie{
+    private int tamano, edad, nenojo;
+    private ArrayList<String> listap = new ArrayList();
     
     
     
