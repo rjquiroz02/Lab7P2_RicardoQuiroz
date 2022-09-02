@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,8 +26,9 @@ public class MainPVZ extends javax.swing.JFrame {
      */
     public MainPVZ() throws FileNotFoundException, IOException {
         initComponents();
-        Leer("./Plantas.txt");
-        Leer("./Zombies.txt");
+        String p = Leer("./Plantas.txt");
+        String z = Leer("./Zombies.txt");
+        
         
                        
 //        FileReader frp = new FileReader("./Plantas.txt");
@@ -42,6 +44,10 @@ public class MainPVZ extends javax.swing.JFrame {
     public String Leer(String ruta) throws FileNotFoundException, IOException{
         return(new BufferedReader(new FileReader(ruta))).readLine();
     }
+    
+//    public String ParsearP(String ruta){
+//        
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -242,6 +248,11 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel6.setText("Ataque");
 
         JB_crearplanta.setText("Crear");
+        JB_crearplanta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crearplantaMouseClicked(evt);
+            }
+        });
 
         jLabel7.setText("Magnitud Explosion");
 
@@ -395,6 +406,11 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel23.setText("Direccion Imagen");
 
         JB_crearzombie.setText("Crear");
+        JB_crearzombie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crearzombieMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout JP_zombiesLayout = new javax.swing.GroupLayout(JP_zombies);
         JP_zombies.setLayout(JP_zombiesLayout);
@@ -526,6 +542,53 @@ public class MainPVZ extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JB_crearplantaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearplantaMouseClicked
+        // TODO add your handling code here:
+        String rango;
+        if (RB_alto.isSelected()) {
+            rango = "Alto";
+        }
+        else if (RB_medio.isSelected()) {
+            rango = "Medio";
+        }
+        else{
+            rango = "Bajo";
+        }
+        
+        if (RB_explosiva.isSelected()) {
+            Explosiva e = new Explosiva((Integer)JS_magexplosion.getValue(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
+            //parseo
+            lplantas.add(e);
+        }
+        if (RB_disparo.isSelected()) {
+            Disparo d = new Disparo(TF_nombrepro.getText(), TF_color.getText(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
+            //parseo
+            lplantas.add(d);
+        }
+        if (RB_defensa.isSelected()) {
+            Defensa def = new Defensa((Integer)JS_altura.getValue(), (Integer)JS_dureza.getValue(), (Integer)JS_peso.getValue(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
+            //parseo
+            lplantas.add(def);
+        }
+    }//GEN-LAST:event_JB_crearplantaMouseClicked
+
+    private void JB_crearzombieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearzombieMouseClicked
+        // TODO add your handling code here:
+        if (RB_clasico.isSelected()) {
+            Bandera b = new Bandera(TF_colorbandera.getText(), TF_direcimagen.getText());
+            Clasico c = new Clasico((Integer)JS_aexp.getValue(), b, TF_nombrez.getText(), (Integer)JS_ataquez.getValue(), (Integer)JS_vidaz.getValue());
+            //parseo
+            lzombies.add(c);
+                    
+        }
+        if (RB_cargado.isSelected()) {
+            Cargado car = new Cargado((Integer)JS_tamano.getValue(), (Integer)JS_edad.getValue(), (Integer)JS_enojo.getValue(), TF_nombrez.getText(), (Integer)JS_ataquez.getValue(), (Integer)JS_vidaz.getValue());
+            //parseo
+            lzombies.add(car);
+        }
+        
+    }//GEN-LAST:event_JB_crearzombieMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -560,10 +623,15 @@ public class MainPVZ extends javax.swing.JFrame {
                     new MainPVZ().setVisible(true);
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(MainPVZ.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(MainPVZ.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
     }
+    
+    ArrayList<Planta> lplantas = new ArrayList();
+    ArrayList<Zombie> lzombies = new ArrayList();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JB_agregarp;
