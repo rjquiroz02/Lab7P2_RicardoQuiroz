@@ -27,6 +27,8 @@ public class MainPVZ extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         JP_test = new javax.swing.JPanel();
@@ -38,6 +40,21 @@ public class MainPVZ extends javax.swing.JFrame {
         TA_test = new javax.swing.JTextArea();
         JB_testear = new javax.swing.JButton();
         JP_plantas = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        RB_bajo = new javax.swing.JRadioButton();
+        RB_medio = new javax.swing.JRadioButton();
+        RB_alto = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        RB_explosiva = new javax.swing.JRadioButton();
+        RB_disparo = new javax.swing.JRadioButton();
+        RB_defensa = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        TF_nombre = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        FTF_vida = new javax.swing.JFormattedTextField();
+        jLabel6 = new javax.swing.JLabel();
+        JS_ataque = new javax.swing.JSpinner();
+        JB_crear = new javax.swing.JButton();
         JP_zombies = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,15 +112,101 @@ public class MainPVZ extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Test", JP_test);
 
+        jLabel2.setText("Rango");
+
+        buttonGroup1.add(RB_bajo);
+        RB_bajo.setSelected(true);
+        RB_bajo.setText("Bajo");
+
+        buttonGroup1.add(RB_medio);
+        RB_medio.setText("Medio");
+
+        buttonGroup1.add(RB_alto);
+        RB_alto.setText("Alto");
+
+        jLabel3.setText("Tipo");
+
+        buttonGroup2.add(RB_explosiva);
+        RB_explosiva.setSelected(true);
+        RB_explosiva.setText("Explosiva");
+
+        buttonGroup2.add(RB_disparo);
+        RB_disparo.setText("Disparo");
+
+        buttonGroup2.add(RB_defensa);
+        RB_defensa.setText("Defensa");
+
+        jLabel4.setText("Nombre");
+
+        jLabel5.setText("Vida");
+
+        jLabel6.setText("Ataque");
+
+        JB_crear.setText("Crear");
+
         javax.swing.GroupLayout JP_plantasLayout = new javax.swing.GroupLayout(JP_plantas);
         JP_plantas.setLayout(JP_plantasLayout);
         JP_plantasLayout.setHorizontalGroup(
             JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 851, Short.MAX_VALUE)
+            .addGroup(JP_plantasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_plantasLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel3))
+                    .addGroup(JP_plantasLayout.createSequentialGroup()
+                        .addComponent(RB_bajo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(RB_explosiva, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_plantasLayout.createSequentialGroup()
+                        .addComponent(RB_alto, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(RB_defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_plantasLayout.createSequentialGroup()
+                        .addComponent(RB_medio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(RB_disparo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
+                    .addComponent(TF_nombre)
+                    .addComponent(FTF_vida, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))
+                .addGap(88, 88, 88)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel6)
+                    .addComponent(JS_ataque)
+                    .addComponent(JB_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         JP_plantasLayout.setVerticalGroup(
             JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 472, Short.MAX_VALUE)
+            .addGroup(JP_plantasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RB_bajo)
+                    .addComponent(RB_explosiva)
+                    .addComponent(TF_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_ataque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RB_medio)
+                    .addComponent(RB_disparo)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RB_alto)
+                    .addComponent(RB_defensa)
+                    .addComponent(FTF_vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_crear))
+                .addContainerGap(371, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Plantas", JP_plantas);
@@ -183,15 +286,32 @@ public class MainPVZ extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFormattedTextField FTF_vida;
+    private javax.swing.JButton JB_crear;
     private javax.swing.JButton JB_testear;
     private javax.swing.JLabel JL_plantatest;
     private javax.swing.JLabel JL_zombietest;
     private javax.swing.JPanel JP_plantas;
     private javax.swing.JPanel JP_test;
     private javax.swing.JPanel JP_zombies;
+    private javax.swing.JSpinner JS_ataque;
     private javax.swing.JTree JT_arboltest;
+    private javax.swing.JRadioButton RB_alto;
+    private javax.swing.JRadioButton RB_bajo;
+    private javax.swing.JRadioButton RB_defensa;
+    private javax.swing.JRadioButton RB_disparo;
+    private javax.swing.JRadioButton RB_explosiva;
+    private javax.swing.JRadioButton RB_medio;
     private javax.swing.JTextArea TA_test;
+    private javax.swing.JTextField TF_nombre;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
