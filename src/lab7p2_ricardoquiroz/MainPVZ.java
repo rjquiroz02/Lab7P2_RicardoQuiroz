@@ -20,10 +20,12 @@ public class MainPVZ extends javax.swing.JFrame {
      */
     public MainPVZ() throws FileNotFoundException {
         initComponents();
-        FileReader frp = new FileReader("./Plantas.txt");
-        BufferedReader brp = new BufferedReader(frp);
-        FileReader frz = new FileReader("./Zombies.txt");
-        BufferedReader brz = new BufferedReader(frz);
+//        FileReader frp = new FileReader("./Plantas.txt");
+//        BufferedReader brp = new BufferedReader(frp);
+//        FileReader frz = new FileReader("./Zombies.txt");
+//        BufferedReader brz = new BufferedReader(frz);
+        Claseadmin caP = new Claseadmin("./Plantas.txt");
+        Claseadmin caZ = new Claseadmin("./Zombies.txt");
         
     }
 
