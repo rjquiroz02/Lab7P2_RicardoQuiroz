@@ -27,17 +27,121 @@ public class MainPVZ extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        JP_test = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JT_arboltest = new javax.swing.JTree();
+        JL_plantatest = new javax.swing.JLabel();
+        JL_zombietest = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TA_test = new javax.swing.JTextArea();
+        JB_testear = new javax.swing.JButton();
+        JP_plantas = new javax.swing.JPanel();
+        JP_zombies = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
+        jLabel1.setText("PLANTAS VS ZOMBIES");
+
+        jScrollPane1.setViewportView(JT_arboltest);
+
+        JL_plantatest.setText("----------------------");
+
+        JL_zombietest.setText("----------------------");
+
+        TA_test.setColumns(20);
+        TA_test.setRows(5);
+        jScrollPane2.setViewportView(TA_test);
+
+        JB_testear.setText("Testear");
+
+        javax.swing.GroupLayout JP_testLayout = new javax.swing.GroupLayout(JP_test);
+        JP_test.setLayout(JP_testLayout);
+        JP_testLayout.setHorizontalGroup(
+            JP_testLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_testLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addGroup(JP_testLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                    .addGroup(JP_testLayout.createSequentialGroup()
+                        .addGroup(JP_testLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JL_zombietest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JL_plantatest, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(JB_testear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        JP_testLayout.setVerticalGroup(
+            JP_testLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_testLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JP_testLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_testLayout.createSequentialGroup()
+                        .addComponent(JL_plantatest)
+                        .addGap(18, 18, 18)
+                        .addComponent(JL_zombietest)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(JB_testear))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Test", JP_test);
+
+        javax.swing.GroupLayout JP_plantasLayout = new javax.swing.GroupLayout(JP_plantas);
+        JP_plantas.setLayout(JP_plantasLayout);
+        JP_plantasLayout.setHorizontalGroup(
+            JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 851, Short.MAX_VALUE)
+        );
+        JP_plantasLayout.setVerticalGroup(
+            JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 472, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Plantas", JP_plantas);
+
+        javax.swing.GroupLayout JP_zombiesLayout = new javax.swing.GroupLayout(JP_zombies);
+        JP_zombies.setLayout(JP_zombiesLayout);
+        JP_zombiesLayout.setHorizontalGroup(
+            JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 851, Short.MAX_VALUE)
+        );
+        JP_zombiesLayout.setVerticalGroup(
+            JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 472, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Zombies", JP_zombies);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 876, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(229, 229, 229)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
 
         pack();
@@ -79,5 +183,17 @@ public class MainPVZ extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB_testear;
+    private javax.swing.JLabel JL_plantatest;
+    private javax.swing.JLabel JL_zombietest;
+    private javax.swing.JPanel JP_plantas;
+    private javax.swing.JPanel JP_test;
+    private javax.swing.JPanel JP_zombies;
+    private javax.swing.JTree JT_arboltest;
+    private javax.swing.JTextArea TA_test;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
