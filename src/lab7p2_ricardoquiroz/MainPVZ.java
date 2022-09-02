@@ -83,7 +83,7 @@ public class MainPVZ extends javax.swing.JFrame {
         TF_nombreper = new javax.swing.JTextField();
         JB_agregarp = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        JL_personaszombie = new javax.swing.JList<>();
         jLabel19 = new javax.swing.JLabel();
         JS_vidaz = new javax.swing.JSpinner();
         jLabel20 = new javax.swing.JLabel();
@@ -316,12 +316,7 @@ public class MainPVZ extends javax.swing.JFrame {
 
         JB_agregarp.setText("+");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList1);
+        jScrollPane3.setViewportView(JL_personaszombie);
 
         jLabel19.setText("Vida");
 
@@ -512,6 +507,7 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JButton JB_crearplanta;
     private javax.swing.JButton JB_crearzombie;
     private javax.swing.JButton JB_testear;
+    private javax.swing.JList<String> JL_personaszombie;
     private javax.swing.JLabel JL_plantatest;
     private javax.swing.JLabel JL_zombietest;
     private javax.swing.JPanel JP_plantas;
@@ -572,7 +568,6 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
