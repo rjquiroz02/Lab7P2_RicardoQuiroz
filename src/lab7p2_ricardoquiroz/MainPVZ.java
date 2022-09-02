@@ -55,6 +55,18 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         JS_ataque = new javax.swing.JSpinner();
         JB_crear = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        JS_magexplosion = new javax.swing.JSpinner();
+        jLabel8 = new javax.swing.JLabel();
+        JS_altura = new javax.swing.JSpinner();
+        jLabel9 = new javax.swing.JLabel();
+        TF_nombrepro = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        JS_peso = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
+        TF_color = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        JS_dureza = new javax.swing.JSpinner();
         JP_zombies = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -144,6 +156,18 @@ public class MainPVZ extends javax.swing.JFrame {
 
         JB_crear.setText("Crear");
 
+        jLabel7.setText("Magnitud Explosion");
+
+        jLabel8.setText("Altura");
+
+        jLabel9.setText("Nombre Proyectil");
+
+        jLabel10.setText("Peso");
+
+        jLabel11.setText("Color");
+
+        jLabel12.setText("Dureza");
+
         javax.swing.GroupLayout JP_plantasLayout = new javax.swing.GroupLayout(JP_plantas);
         JP_plantas.setLayout(JP_plantasLayout);
         JP_plantasLayout.setHorizontalGroup(
@@ -152,32 +176,51 @@ public class MainPVZ extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JP_plantasLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel3))
+                        .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_plantasLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(81, 81, 81)
+                                .addComponent(jLabel3))
+                            .addGroup(JP_plantasLayout.createSequentialGroup()
+                                .addComponent(RB_bajo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(RB_explosiva, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JP_plantasLayout.createSequentialGroup()
+                                .addComponent(RB_alto, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(RB_defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JP_plantasLayout.createSequentialGroup()
+                                .addComponent(RB_medio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(RB_disparo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(39, 39, 39)
+                        .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(TF_nombre)
+                            .addComponent(FTF_vida, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
                     .addGroup(JP_plantasLayout.createSequentialGroup()
-                        .addComponent(RB_bajo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(RB_explosiva, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JP_plantasLayout.createSequentialGroup()
-                        .addComponent(RB_alto, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(RB_defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JP_plantasLayout.createSequentialGroup()
-                        .addComponent(RB_medio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(RB_disparo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
+                        .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(JS_altura, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                                .addComponent(JS_magexplosion, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel8))
+                        .addGap(84, 84, 84)
+                        .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(TF_nombrepro)
+                            .addComponent(JS_peso, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))))
+                .addGap(70, 70, 70)
                 .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4)
-                    .addComponent(TF_nombre)
-                    .addComponent(FTF_vida, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))
-                .addGap(88, 88, 88)
-                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(JS_ataque)
-                    .addComponent(JB_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
+                    .addComponent(JB_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                    .addComponent(TF_color)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_dureza))
                 .addContainerGap(107, Short.MAX_VALUE))
         );
         JP_plantasLayout.setVerticalGroup(
@@ -206,7 +249,27 @@ public class MainPVZ extends javax.swing.JFrame {
                     .addComponent(RB_defensa)
                     .addComponent(FTF_vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JB_crear))
-                .addContainerGap(371, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JS_magexplosion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TF_nombrepro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TF_color, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JS_altura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_dureza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Plantas", JP_plantas);
@@ -294,7 +357,11 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JPanel JP_plantas;
     private javax.swing.JPanel JP_test;
     private javax.swing.JPanel JP_zombies;
+    private javax.swing.JSpinner JS_altura;
     private javax.swing.JSpinner JS_ataque;
+    private javax.swing.JSpinner JS_dureza;
+    private javax.swing.JSpinner JS_magexplosion;
+    private javax.swing.JSpinner JS_peso;
     private javax.swing.JTree JT_arboltest;
     private javax.swing.JRadioButton RB_alto;
     private javax.swing.JRadioButton RB_bajo;
@@ -303,15 +370,23 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JRadioButton RB_explosiva;
     private javax.swing.JRadioButton RB_medio;
     private javax.swing.JTextArea TA_test;
+    private javax.swing.JTextField TF_color;
     private javax.swing.JTextField TF_nombre;
+    private javax.swing.JTextField TF_nombrepro;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
