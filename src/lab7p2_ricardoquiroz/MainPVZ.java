@@ -103,6 +103,40 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
         jLabel1.setText("PLANTAS VS ZOMBIES");
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Entidad");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Plantas");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Defensa");
+        javax.swing.tree.DefaultMutableTreeNode treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Disparo");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Explosiva");
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Bajo");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Medio");
+        treeNode3.add(treeNode4);
+        treeNode4 = new javax.swing.tree.DefaultMutableTreeNode("Alto");
+        treeNode3.add(treeNode4);
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Zombies");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Clasico");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Cargado");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        JT_arboltest.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(JT_arboltest);
 
         JL_plantatest.setText("----------------------");
