@@ -6,8 +6,11 @@
 package lab7p2_ricardoquiroz;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,15 +23,24 @@ public class MainPVZ extends javax.swing.JFrame {
     /**
      * Creates new form MainPVZ
      */
-    public MainPVZ() throws FileNotFoundException {
+    public MainPVZ() throws FileNotFoundException, IOException {
         initComponents();
+        Leer("./Plantas.txt");
+        Leer("./Zombies.txt");
+        
+                       
 //        FileReader frp = new FileReader("./Plantas.txt");
 //        BufferedReader brp = new BufferedReader(frp);
 //        FileReader frz = new FileReader("./Zombies.txt");
 //        BufferedReader brz = new BufferedReader(frz);
-        Claseadmin caP = new Claseadmin("./Plantas.txt");
-        Claseadmin caZ = new Claseadmin("./Zombies.txt");
+//        Claseadmin caP = new Claseadmin("./Plantas.txt");
+//        Claseadmin caZ = new Claseadmin("./Zombies.txt");
         
+        
+    }
+    
+    public String Leer(String ruta) throws FileNotFoundException, IOException{
+        return(new BufferedReader(new FileReader(ruta))).readLine();
     }
 
     /**

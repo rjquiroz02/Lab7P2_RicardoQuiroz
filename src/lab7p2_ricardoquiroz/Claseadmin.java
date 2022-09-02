@@ -62,29 +62,46 @@ public class Claseadmin {
         this.lzombies.add(z);
     }
     
-    public void escribirArchivo() throws IOException{
-        FileWriter fw=null;
-        BufferedWriter bw = null;
-        try {
-            fw = new FileWriter(archivo, true);
-            bw = new BufferedWriter(fw);
-            for (Planta p : lplantas) {
-                
-            }
-            bw.flush();
-            for (Zombie z : lzombies) {
-                
-            }
-            bw.flush();
-        } catch (Exception e) {
-        }
-        bw.close();
-        fw.close();
-        
-    }
-    
-    public void cargarArchivo(){
-        
-    }
+//    public void escribirArchivoP() throws IOException{
+//        FileWriter fw=null;
+//        BufferedWriter bw = null;
+//        try {
+//            fw = new FileWriter(archivo, true);
+//            bw = new BufferedWriter(fw);
+//            for (Planta p : lplantas) {
+//                
+//            }
+//            bw.flush();
+//        } catch (Exception e) {
+//        }
+//        bw.close();
+//        fw.close();
+//        
+//    }
+//    
+//    public void escribirArchivoZ() throws IOException{
+//        FileWriter fw=null;
+//        BufferedWriter bw = null;
+//        try {
+//            fw = new FileWriter(archivo, true);
+//            bw = new BufferedWriter(fw);
+//            for (Zombie z : lzombies) {
+//                
+//            }
+//            bw.flush();
+//        } catch (Exception e) {
+//        }
+//        bw.close();
+//        fw.close();
+//        
+//    }
+//    
+//    public void cargarArchivoP(){
+//        
+//    }
+//    
+//    public void cargarArchivoZ(){
+//        
+//    }
     
 }
