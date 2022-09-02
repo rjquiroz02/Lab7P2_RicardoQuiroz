@@ -29,6 +29,7 @@ public class MainPVZ extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         JP_test = new javax.swing.JPanel();
@@ -53,7 +54,7 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         JS_ataque = new javax.swing.JSpinner();
-        JB_crear = new javax.swing.JButton();
+        JB_crearplanta = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         JS_magexplosion = new javax.swing.JSpinner();
         jLabel8 = new javax.swing.JLabel();
@@ -83,6 +84,18 @@ public class MainPVZ extends javax.swing.JFrame {
         JB_agregarp = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        jLabel19 = new javax.swing.JLabel();
+        JS_vidaz = new javax.swing.JSpinner();
+        jLabel20 = new javax.swing.JLabel();
+        JS_aexp = new javax.swing.JSpinner();
+        jLabel21 = new javax.swing.JLabel();
+        RB_clasico = new javax.swing.JRadioButton();
+        RB_cargado = new javax.swing.JRadioButton();
+        jLabel22 = new javax.swing.JLabel();
+        TF_colorbandera = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        TF_direcimagen = new javax.swing.JTextField();
+        JB_crearzombie = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -169,7 +182,7 @@ public class MainPVZ extends javax.swing.JFrame {
 
         jLabel6.setText("Ataque");
 
-        JB_crear.setText("Crear");
+        JB_crearplanta.setText("Crear");
 
         jLabel7.setText("Magnitud Explosion");
 
@@ -232,7 +245,7 @@ public class MainPVZ extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(JS_ataque)
-                    .addComponent(JB_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                    .addComponent(JB_crearplanta, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                     .addComponent(TF_color)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JS_dureza))
@@ -262,7 +275,7 @@ public class MainPVZ extends javax.swing.JFrame {
                 .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RB_alto)
                     .addComponent(RB_defensa)
-                    .addComponent(JB_crear)
+                    .addComponent(JB_crearplanta)
                     .addComponent(JS_vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(76, 76, 76)
                 .addGroup(JP_plantasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -310,6 +323,25 @@ public class MainPVZ extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jList1);
 
+        jLabel19.setText("Vida");
+
+        jLabel20.setText("Años Experiencia");
+
+        jLabel21.setText("Tipo");
+
+        buttonGroup3.add(RB_clasico);
+        RB_clasico.setSelected(true);
+        RB_clasico.setText("Clasico");
+
+        buttonGroup3.add(RB_cargado);
+        RB_cargado.setText("Cargado");
+
+        jLabel22.setText("Color Bandera");
+
+        jLabel23.setText("Direccion Imagen");
+
+        JB_crearzombie.setText("Crear");
+
         javax.swing.GroupLayout JP_zombiesLayout = new javax.swing.GroupLayout(JP_zombies);
         JP_zombies.setLayout(JP_zombiesLayout);
         JP_zombiesLayout.setHorizontalGroup(
@@ -318,17 +350,30 @@ public class MainPVZ extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(JS_ataquez, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TF_nombrez, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(JS_tamano, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JS_edad, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(JS_vidaz, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(JS_ataquez, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TF_nombrez, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RB_clasico, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RB_cargado, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_crearzombie, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_tamano, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_edad)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JS_aexp)
+                    .addComponent(jLabel22)
+                    .addComponent(TF_colorbandera)
+                    .addComponent(jLabel23)
+                    .addComponent(TF_direcimagen))
                 .addGap(46, 46, 46)
                 .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,7 +411,36 @@ public class MainPVZ extends javax.swing.JFrame {
                     .addComponent(TF_nombreper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JB_agregarp))
                 .addGap(27, 27, 27)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+                .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
+                    .addGroup(JP_zombiesLayout.createSequentialGroup()
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JS_vidaz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JS_aexp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel22))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(RB_clasico)
+                            .addComponent(TF_colorbandera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(JP_zombiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_zombiesLayout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(TF_direcimagen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JP_zombiesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RB_cargado)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JB_crearzombie, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 102, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -435,13 +509,15 @@ public class MainPVZ extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JB_agregarp;
-    private javax.swing.JButton JB_crear;
+    private javax.swing.JButton JB_crearplanta;
+    private javax.swing.JButton JB_crearzombie;
     private javax.swing.JButton JB_testear;
     private javax.swing.JLabel JL_plantatest;
     private javax.swing.JLabel JL_zombietest;
     private javax.swing.JPanel JP_plantas;
     private javax.swing.JPanel JP_test;
     private javax.swing.JPanel JP_zombies;
+    private javax.swing.JSpinner JS_aexp;
     private javax.swing.JSpinner JS_altura;
     private javax.swing.JSpinner JS_ataque;
     private javax.swing.JSpinner JS_ataquez;
@@ -452,21 +528,27 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JSpinner JS_peso;
     private javax.swing.JSpinner JS_tamano;
     private javax.swing.JSpinner JS_vida;
+    private javax.swing.JSpinner JS_vidaz;
     private javax.swing.JTree JT_arboltest;
     private javax.swing.JRadioButton RB_alto;
     private javax.swing.JRadioButton RB_bajo;
+    private javax.swing.JRadioButton RB_cargado;
+    private javax.swing.JRadioButton RB_clasico;
     private javax.swing.JRadioButton RB_defensa;
     private javax.swing.JRadioButton RB_disparo;
     private javax.swing.JRadioButton RB_explosiva;
     private javax.swing.JRadioButton RB_medio;
     private javax.swing.JTextArea TA_test;
     private javax.swing.JTextField TF_color;
+    private javax.swing.JTextField TF_colorbandera;
+    private javax.swing.JTextField TF_direcimagen;
     private javax.swing.JTextField TF_nombre;
     private javax.swing.JTextField TF_nombreper;
     private javax.swing.JTextField TF_nombrepro;
     private javax.swing.JTextField TF_nombrez;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -477,7 +559,12 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

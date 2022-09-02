@@ -6,6 +6,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -232,7 +234,7 @@
                           <Component id="jLabel11" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <Component id="JS_ataque" max="32767" attributes="0"/>
-                          <Component id="JB_crear" alignment="0" pref="199" max="32767" attributes="0"/>
+                          <Component id="JB_crearplanta" alignment="0" pref="199" max="32767" attributes="0"/>
                           <Component id="TF_color" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel12" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="JS_dureza" alignment="0" max="32767" attributes="0"/>
@@ -268,7 +270,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="RB_alto" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RB_defensa" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="JB_crear" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="JB_crearplanta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="JS_vida" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -380,7 +382,7 @@
             </Component>
             <Component class="javax.swing.JSpinner" name="JS_ataque">
             </Component>
-            <Component class="javax.swing.JButton" name="JB_crear">
+            <Component class="javax.swing.JButton" name="JB_crearplanta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Crear"/>
               </Properties>
@@ -447,20 +449,34 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="JS_ataquez" alignment="0" pref="174" max="32767" attributes="0"/>
-                              <Component id="jLabel13" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="TF_nombrez" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JS_vidaz" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="JS_ataquez" alignment="0" pref="174" max="32767" attributes="0"/>
+                                      <Component id="jLabel13" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="TF_nombrez" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabel16" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="jLabel16" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="jLabel19" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="jLabel21" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="RB_clasico" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="RB_cargado" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="JB_crearzombie" min="-2" pref="193" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="JS_tamano" alignment="0" pref="210" max="32767" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="JS_edad" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel20" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="JS_tamano" alignment="0" pref="210" max="32767" attributes="0"/>
+                          <Component id="jLabel14" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="JS_edad" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel17" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="JS_aexp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TF_colorbandera" max="32767" attributes="0"/>
+                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                          <Component id="TF_direcimagen" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -507,7 +523,45 @@
                           <Component id="JB_agregarp" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" pref="304" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane3" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="JS_vidaz" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JS_aexp" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="RB_clasico" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TF_colorbandera" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="TF_direcimagen" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="RB_cargado" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="JB_crearzombie" min="-2" pref="39" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="102" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -586,6 +640,61 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Vida"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_vidaz">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel20">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="A&#xf1;os Experiencia"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="JS_aexp">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tipo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_clasico">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup3"/>
+                </Property>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Clasico"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="RB_cargado">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup3"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cargado"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel22">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color Bandera"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="TF_colorbandera">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel23">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion Imagen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="TF_direcimagen">
+            </Component>
+            <Component class="javax.swing.JButton" name="JB_crearzombie">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
