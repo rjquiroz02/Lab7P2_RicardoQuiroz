@@ -100,7 +100,12 @@ public class MainPVZ extends javax.swing.JFrame {
         return(new BufferedReader(new FileReader(ruta))).readLine();
     }
     
-    public void Parseop(){
+    public void ParseoP(){
+        String zombiesseparados;
+        
+    }
+    
+    public void ParseoZ(){
         
     }
     
