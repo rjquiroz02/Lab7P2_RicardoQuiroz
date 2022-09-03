@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  *
@@ -29,6 +30,9 @@ public class MainPVZ extends javax.swing.JFrame {
         initComponents();
         String p = Leer("./Plantas.txt");
         String z = Leer("./Zombies.txt");
+        DefaultMutableTreeNode nodonombre;
+        nodonombre = new DefaultMutableTreeNode(TF_nombre.getText());
+        
         
         
                        
@@ -62,6 +66,7 @@ public class MainPVZ extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         JP_test = new javax.swing.JPanel();
@@ -392,6 +397,7 @@ public class MainPVZ extends javax.swing.JFrame {
             }
         });
 
+        JL_personaszombie.setModel(new DefaultListModel());
         jScrollPane3.setViewportView(JL_personaszombie);
 
         jLabel19.setText("Vida");
@@ -712,6 +718,7 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
