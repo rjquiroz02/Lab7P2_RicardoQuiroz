@@ -33,9 +33,20 @@ public class MainPVZ extends javax.swing.JFrame {
         String z = Leer("./Zombies.txt");
         DefaultTreeModel tree = (DefaultTreeModel) JT_arboltest.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) tree.getRoot();
-        DefaultMutableTreeNode plantas = new DefaultMutableTreeNode();
-        DefaultMutableTreeNode defensa = (DefaultMutableTreeNode)plantas.getChild(plantas, 0);
-        DefaultMutableTreeNode disparo = (DefaultMutableTreeNode)tree.getChild(plantas, 1);
+        for (Planta pl : lplantas) {
+            DefaultMutableTreeNode pagregada = new DefaultMutableTreeNode(pl.getNombre());
+            if (pl instanceof Disparo) {
+                
+            }
+            else if (pl instanceof Explosiva) {
+                
+            }
+            else if (pl instanceof Defensa) {
+                
+            }
+            
+            
+        }
         
         
         
