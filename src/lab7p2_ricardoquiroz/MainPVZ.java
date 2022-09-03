@@ -31,6 +31,19 @@ public class MainPVZ extends javax.swing.JFrame {
         initComponents();
         String p = Leer("./Plantas.txt");
         String z = Leer("./Zombies.txt");
+        
+            
+//        FileReader frp = new FileReader("./Plantas.txt");
+//        BufferedReader brp = new BufferedReader(frp);
+//        FileReader frz = new FileReader("./Zombies.txt");
+//        BufferedReader brz = new BufferedReader(frz);
+//        Claseadmin caP = new Claseadmin("./Plantas.txt");
+//        Claseadmin caZ = new Claseadmin("./Zombies.txt");
+        
+        
+    }
+    
+    public void arbol(){
         DefaultTreeModel tree = (DefaultTreeModel) JT_arboltest.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) tree.getRoot();
         for (Planta pl : lplantas) {
@@ -72,17 +85,15 @@ public class MainPVZ extends javax.swing.JFrame {
             
         }
         
-        
-        
-                       
-//        FileReader frp = new FileReader("./Plantas.txt");
-//        BufferedReader brp = new BufferedReader(frp);
-//        FileReader frz = new FileReader("./Zombies.txt");
-//        BufferedReader brz = new BufferedReader(frz);
-//        Claseadmin caP = new Claseadmin("./Plantas.txt");
-//        Claseadmin caZ = new Claseadmin("./Zombies.txt");
-        
-        
+        for (Zombie zo : lzombies) {
+            DefaultMutableTreeNode zagregado = new DefaultMutableTreeNode(zo.getNombre());
+            if (zo instanceof Clasico) {
+                ((DefaultMutableTreeNode)(root.getChildAt(1).getChildAt(0))).add(zagregado);
+            }
+            if (zo instanceof Cargado) {
+                ((DefaultMutableTreeNode)(root.getChildAt(1).getChildAt(1))).add(zagregado);
+            }
+        }
     }
     
     public String Leer(String ruta) throws FileNotFoundException, IOException{
