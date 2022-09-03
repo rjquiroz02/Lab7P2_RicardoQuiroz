@@ -16,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
@@ -30,8 +31,11 @@ public class MainPVZ extends javax.swing.JFrame {
         initComponents();
         String p = Leer("./Plantas.txt");
         String z = Leer("./Zombies.txt");
-        DefaultMutableTreeNode nodonombre;
-        nodonombre = new DefaultMutableTreeNode(TF_nombre.getText());
+        DefaultTreeModel tree = (DefaultTreeModel) JT_arboltest.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) tree.getRoot();
+        DefaultMutableTreeNode plantas = new DefaultMutableTreeNode();
+        DefaultMutableTreeNode defensa = (DefaultMutableTreeNode)plantas.getChild(plantas, 0);
+        DefaultMutableTreeNode disparo = (DefaultMutableTreeNode)tree.getChild(plantas, 1);
         
         
         
