@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -99,6 +100,8 @@ public class MainPVZ extends javax.swing.JFrame {
     public String Leer(String ruta) throws FileNotFoundException, IOException{
         return(new BufferedReader(new FileReader(ruta))).readLine();
     }
+    
+    
     
 //    public String ParsearP(String ruta){
 //        
@@ -621,16 +624,22 @@ public class MainPVZ extends javax.swing.JFrame {
             Explosiva e = new Explosiva((Integer)JS_magexplosion.getValue(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
             //parseo
             lplantas.add(e);
+            arbol();
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente");
         }
         if (RB_disparo.isSelected()) {
             Disparo d = new Disparo(TF_nombrepro.getText(), TF_color.getText(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
             //parseo
             lplantas.add(d);
+            arbol();
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente");
         }
         if (RB_defensa.isSelected()) {
             Defensa def = new Defensa((Integer)JS_altura.getValue(), (Integer)JS_dureza.getValue(), (Integer)JS_peso.getValue(), TF_nombre.getText(), rango, (Integer)JS_ataque.getValue(), (Integer)JS_vida.getValue());
             //parseo
             lplantas.add(def);
+            arbol();
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente");
         }
     }//GEN-LAST:event_JB_crearplantaMouseClicked
 
@@ -641,12 +650,15 @@ public class MainPVZ extends javax.swing.JFrame {
             Clasico c = new Clasico((Integer)JS_aexp.getValue(), b, TF_nombrez.getText(), (Integer)JS_ataquez.getValue(), (Integer)JS_vidaz.getValue());
             //parseo
             lzombies.add(c);
-                    
+            arbol();
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente");
         }
         if (RB_cargado.isSelected()) {
             Cargado car = new Cargado((Integer)JS_tamano.getValue(), (Integer)JS_edad.getValue(), (Integer)JS_enojo.getValue(), TF_nombrez.getText(), (Integer)JS_ataquez.getValue(), (Integer)JS_vidaz.getValue());
             //parseo
             lzombies.add(car);
+            arbol();
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente");
         }
         
     }//GEN-LAST:event_JB_crearzombieMouseClicked
