@@ -36,13 +36,37 @@ public class MainPVZ extends javax.swing.JFrame {
         for (Planta pl : lplantas) {
             DefaultMutableTreeNode pagregada = new DefaultMutableTreeNode(pl.getNombre());
             if (pl instanceof Disparo) {
-                
+                if (pl.getRango().equals("Bajo")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(1).getChildAt(0))).add(pagregada);
+                }
+                if (pl.getRango().equals("Medio")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(1).getChildAt(1))).add(pagregada);
+                }
+                if (pl.getRango().equals("Alto")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(1).getChildAt(2))).add(pagregada);
+                }
             }
             else if (pl instanceof Explosiva) {
-                
+                if (pl.getRango().equals("Bajo")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(2).getChildAt(0))).add(pagregada);
+                }
+                if (pl.getRango().equals("Medio")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(2).getChildAt(1))).add(pagregada);
+                }
+                if (pl.getRango().equals("Alto")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(2).getChildAt(2))).add(pagregada);
+                }
             }
             else if (pl instanceof Defensa) {
-                
+                if (pl.getRango().equals("Bajo")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(0).getChildAt(0))).add(pagregada);
+                }
+                if (pl.getRango().equals("Medio")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(0).getChildAt(1))).add(pagregada);
+                }
+                if (pl.getRango().equals("Alto")) {
+                    ((DefaultMutableTreeNode)(root.getChildAt(0).getChildAt(0).getChildAt(2))).add(pagregada);
+                }
             }
             
             
