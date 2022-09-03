@@ -13,6 +13,26 @@
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="MI_imprimir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Imprimir"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="MI_eliminar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_eliminarActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="MI_elegir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Elegir"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
     </Container>
   </NonVisualComponents>
   <Properties>
@@ -139,6 +159,9 @@
                   <Properties>
                     <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
                       <TreeModel code="Entidad&#xa; Plantas&#xa;  Defensa&#xa;   Bajo&#xa;   Medio&#xa;   Alto&#xa;  Disparo&#xa;   Bajo&#xa;   Medio&#xa;   Alto&#xa;  Explosiva&#xa;   Bajo&#xa;   Medio&#xa;   Alto&#xa; Zombies&#xa;  Clasico&#xa;  Cargado"/>
+                    </Property>
+                    <Property name="componentPopupMenu" type="javax.swing.JPopupMenu" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jPopupMenu1"/>
                     </Property>
                   </Properties>
                 </Component>

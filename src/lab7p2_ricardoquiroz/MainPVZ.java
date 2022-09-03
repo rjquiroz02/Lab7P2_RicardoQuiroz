@@ -40,8 +40,7 @@ public class MainPVZ extends javax.swing.JFrame {
 //        BufferedReader brz = new BufferedReader(frz);
 //        Claseadmin caP = new Claseadmin("./Plantas.txt");
 //        Claseadmin caZ = new Claseadmin("./Zombies.txt");
-        
-        
+               
     }
     
     public void arbol(){
@@ -101,11 +100,10 @@ public class MainPVZ extends javax.swing.JFrame {
         return(new BufferedReader(new FileReader(ruta))).readLine();
     }
     
+    public void Parseop(){
+        
+    }
     
-    
-//    public String ParsearP(String ruta){
-//        
-//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -120,6 +118,9 @@ public class MainPVZ extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         jPopupMenu1 = new javax.swing.JPopupMenu();
+        MI_imprimir = new javax.swing.JMenuItem();
+        MI_eliminar = new javax.swing.JMenuItem();
+        MI_elegir = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         JP_test = new javax.swing.JPanel();
@@ -187,6 +188,20 @@ public class MainPVZ extends javax.swing.JFrame {
         TF_direcimagen = new javax.swing.JTextField();
         JB_crearzombie = new javax.swing.JButton();
 
+        MI_imprimir.setText("Imprimir");
+        jPopupMenu1.add(MI_imprimir);
+
+        MI_eliminar.setText("Eliminar");
+        MI_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_eliminarActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(MI_eliminar);
+
+        MI_elegir.setText("Elegir");
+        jPopupMenu1.add(MI_elegir);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
@@ -227,6 +242,7 @@ public class MainPVZ extends javax.swing.JFrame {
         treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
         JT_arboltest.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        JT_arboltest.setComponentPopupMenu(jPopupMenu1);
         jScrollPane1.setViewportView(JT_arboltest);
 
         JL_plantatest.setText("----------------------");
@@ -670,6 +686,11 @@ public class MainPVZ extends javax.swing.JFrame {
         JL_personaszombie.setModel(m);
     }//GEN-LAST:event_JB_agregarpMouseClicked
 
+    private void MI_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_eliminarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_MI_eliminarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -738,6 +759,9 @@ public class MainPVZ extends javax.swing.JFrame {
     private javax.swing.JSpinner JS_vida;
     private javax.swing.JSpinner JS_vidaz;
     private javax.swing.JTree JT_arboltest;
+    private javax.swing.JMenuItem MI_elegir;
+    private javax.swing.JMenuItem MI_eliminar;
+    private javax.swing.JMenuItem MI_imprimir;
     private javax.swing.JRadioButton RB_alto;
     private javax.swing.JRadioButton RB_bajo;
     private javax.swing.JRadioButton RB_cargado;
