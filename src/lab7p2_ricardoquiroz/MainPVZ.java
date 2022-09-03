@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 
 /**
  *
@@ -385,6 +386,11 @@ public class MainPVZ extends javax.swing.JFrame {
         jLabel18.setText("Agregar Persona Comida");
 
         JB_agregarp.setText("+");
+        JB_agregarp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_agregarpMouseClicked(evt);
+            }
+        });
 
         jScrollPane3.setViewportView(JL_personaszombie);
 
@@ -588,6 +594,13 @@ public class MainPVZ extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_JB_crearzombieMouseClicked
+
+    private void JB_agregarpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_agregarpMouseClicked
+        // TODO add your handling code here:
+        DefaultListModel m = (DefaultListModel) JL_personaszombie.getModel();
+        m.addElement(TF_nombreper.getText());
+        JL_personaszombie.setModel(m);
+    }//GEN-LAST:event_JB_agregarpMouseClicked
 
     /**
      * @param args the command line arguments
